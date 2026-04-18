@@ -2,9 +2,7 @@
 
 An embedded systems project built and programmed from scratch — a wireless scrolling LED display controlled in real time via Bluetooth.
 
-## Demo
-
-> The physical prototype in action — text sent from a phone scrolls across the LED matrix in real time.
+## Prototype
 
 ![Prototype](./journalLumineuxFinalProd.png)
 
@@ -34,6 +32,20 @@ A smartphone or PC sends a text message wirelessly over Bluetooth. The Arduino r
 
 ---
 
+## Wiring Diagram
+
+![Wiring Diagram](./Cablage.png)
+
+---
+
+## Circuit Schematic (Proteus ISIS)
+
+![Proteus ISIS Schematic](./ProteusISISjournalLumineux.png)
+
+> The full Proteus project file is available at `journalLumineux.pdsprj` — open it with Proteus ISIS to run the simulation.
+
+---
+
 ## Features
 
 - Send any text message wirelessly from a phone or laptop
@@ -50,6 +62,7 @@ A smartphone or PC sends a text message wirelessly over Bluetooth. The Arduino r
 - **Libraries:** MD_Parola, MD_MAX72xx, SoftwareSerial, SPI
 - **Protocol:** UART over Bluetooth (HC-06, 9600 baud)
 - **Hardware interface:** SPI (LED matrix), Software Serial (Bluetooth)
+- **Simulation:** Proteus ISIS
 
 ---
 
@@ -58,24 +71,15 @@ A smartphone or PC sends a text message wirelessly over Bluetooth. The Arduino r
 ### Requirements
 - Arduino IDE
 - Libraries: `MD_Parola`, `MD_MAX72xx` (installable via Arduino Library Manager)
-
-### Wiring
-| Arduino Pin | Connected To |
-|---|---|
-| Pin 10 (CS) | LED Matrix CS |
-| Pin 11 (MOSI) | LED Matrix DIN |
-| Pin 13 (SCK) | LED Matrix CLK |
-| Pin 2 (RX) | HC-06 TX |
-| Pin 3 (TX) | HC-06 RX |
-| Pin 4 | RGB LED Red |
-| Pin 5 | RGB LED Green |
+- Proteus ISIS (optional, to open the simulation file)
 
 ### Upload & Use
 1. Clone this repo and open `Journal_Lumineux_2ap.ino` in Arduino IDE
 2. Install required libraries via Library Manager
-3. Upload to Arduino Uno
-4. Pair your phone with the HC-06 module (default PIN: `1234`)
-5. Use any Bluetooth serial terminal app to send messages or speed commands
+3. Wire the components following `Cablage.png`
+4. Upload to Arduino Uno
+5. Pair your phone with the HC-06 module (default PIN: `1234`)
+6. Use any Bluetooth serial terminal app to send messages or speed commands (`+` / `-` to adjust speed)
 
 ---
 
