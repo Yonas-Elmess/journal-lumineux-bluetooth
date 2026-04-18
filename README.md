@@ -1,10 +1,12 @@
 # Bluetooth-Controlled Scrolling LED Display (Journal Lumineux)
 
-An embedded systems project built and programmed from scratch — a wireless scrolling LED display controlled in real time via Bluetooth.
+An embedded systems project built and programmed from scratch — a wireless scrolling LED display controlled in real time via Bluetooth, housed in a custom 3D-printed enclosure.
 
-## Prototype
+---
 
-![Prototype](./journalLumineuxFinalProd.png)
+## Demo
+
+![Demo](./DemoDoneByMe.gif)
 
 ---
 
@@ -42,7 +44,23 @@ A smartphone or PC sends a text message wirelessly over Bluetooth. The Arduino r
 
 ![Proteus ISIS Schematic](./ProteusISISjournalLumineux.png)
 
-> The full Proteus project file is available at `journalLumineux.pdsprj` — open it with Proteus ISIS to run the simulation.
+> The full Proteus simulation file is available at `journalLumineux.pdsprj` — open it with Proteus ISIS to run the simulation.
+
+---
+
+## Enclosure Design (3D Modelling)
+
+The enclosure was fully designed in **Blender 4.4** and 3D printed to house all components in a clean, stable casing.
+
+![Enclosure 3D Model](./PrototypeDesignPreview.png)
+
+> The Blender source file is available at `PrototypeDesign.blend`.
+
+---
+
+## Finished Prototype
+
+![Finished Prototype](./journalLumineuxFinalProd.png)
 
 ---
 
@@ -52,6 +70,7 @@ A smartphone or PC sends a text message wirelessly over Bluetooth. The Arduino r
 - Real-time scrolling display on a 32×8 LED matrix
 - Live speed control via `+` (faster) and `-` (slower) commands
 - RGB LED status feedback: green = idle, red = receiving data
+- Custom 3D-printed enclosure designed in Blender
 - Default boot message: `"Pret !"`
 
 ---
@@ -63,6 +82,7 @@ A smartphone or PC sends a text message wirelessly over Bluetooth. The Arduino r
 - **Protocol:** UART over Bluetooth (HC-06, 9600 baud)
 - **Hardware interface:** SPI (LED matrix), Software Serial (Bluetooth)
 - **Simulation:** Proteus ISIS
+- **3D Modelling:** Blender 4.4
 
 ---
 
@@ -72,6 +92,7 @@ A smartphone or PC sends a text message wirelessly over Bluetooth. The Arduino r
 - Arduino IDE
 - Libraries: `MD_Parola`, `MD_MAX72xx` (installable via Arduino Library Manager)
 - Proteus ISIS (optional, to open the simulation file)
+- Blender 4.4+ (optional, to open the enclosure design file)
 
 ### Upload & Use
 1. Clone this repo and open `Journal_Lumineux_2ap.ino` in Arduino IDE
@@ -79,14 +100,14 @@ A smartphone or PC sends a text message wirelessly over Bluetooth. The Arduino r
 3. Wire the components following `Cablage.png`
 4. Upload to Arduino Uno
 5. Pair your phone with the HC-06 module (default PIN: `1234`)
-6. Use any Bluetooth serial terminal app to send messages or speed commands (`+` / `-` to adjust speed)
+6. Use any Bluetooth serial terminal app to send messages or speed commands (`+` / `-` to adjust scroll speed)
 
 ---
 
 ## Project Context
 
 Built as a 2ème année préparatoire engineering project at ISGA (2024–2025).  
-Fully designed, programmed, wired, and physically assembled — the prototype was printed and tested end to end.
+Fully designed, programmed, wired, simulated, and physically assembled — including a custom 3D-printed enclosure. The prototype was tested end to end and confirmed working.
 
 ---
 
